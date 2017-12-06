@@ -1,3 +1,8 @@
+# This project is deprecated
+
+PySyft has been moved [here](https://github.com/OpenMined/PySyft)
+
+
 # Syft
 
 [![Chat on Slack](https://img.shields.io/badge/chat-on%20slack-7A5979.svg)](https://openmined.slack.com/messages/team_pysyft)
