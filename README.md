@@ -16,44 +16,6 @@ The goal of this library is to give the user the ability to efficiently train De
 - [Relevant Literature](#relevant-literature)
 - [License](#license)
 
-## Setup with Docker
-
-The fastest way to get started is to use the pre-assembled Docker image (works on all major operating systems). Alternatively, one can manually set up all the dependencies and develop locally.
-
-### Get Docker
-Install Docker following the instructions on the [website](https://www.docker.com/).
-
-For macOS users with [Homebrew](https://brew.sh/) installed, use:
-```sh
-brew cask install docker
-open -a docker
-```
-
-You can ensure that Docker is properly installed and running by checking: `docker --version`.
-
-### Run PySyft in a container
-First, clone this repository and navigate into its folder:
-
-```sh
-git clone https://github.com/OpenMined/PySyft.git
-cd PySyft
-```
-
-Now, start a container based on [openmined/pysyft](https://hub.docker.com/r/openmined/pysyft/):
-```sh
-make docker-build
-make docker-run
-```
-In this container you'll be able to open a Python shell, import the library and develop with it.
-
-However, if you want to use Jupyter, try the provided notebooks, and make changes to the source,
-you should create your personal development image:
-```sh
-make docker-build-dev
-make docker-run image=openmined/pysyft-dev:local
-```
-
-Inside the container you can run any make targets such as `test` or `notebook`.
 
 ## Local setup
 
@@ -123,6 +85,46 @@ The make target `test` will run all tests with `pytest` and `flake8` (either loc
 ```sh
 make test
 ```
+
+## Setup with Docker
+
+The fastest way to get started is to use the pre-assembled Docker image (works on all major operating systems). Alternatively, one can manually set up all the dependencies and develop locally.
+
+### Get Docker
+Install Docker following the instructions on the [website](https://www.docker.com/).
+
+For macOS users with [Homebrew](https://brew.sh/) installed, use:
+```sh
+brew cask install docker
+open -a docker
+```
+
+You can ensure that Docker is properly installed and running by checking: `docker --version`.
+
+### Run PySyft in a container
+First, clone this repository and navigate into its folder:
+
+```sh
+git clone https://github.com/OpenMined/PySyft.git
+cd PySyft
+```
+
+Now, start a container based on [openmined/pysyft](https://hub.docker.com/r/openmined/pysyft/):
+```sh
+make docker-build
+make docker-run
+```
+In this container you'll be able to open a Python shell, import the library and develop with it.
+
+However, if you want to use Jupyter, try the provided notebooks, and make changes to the source,
+you should create your personal development image:
+```sh
+make docker-build-dev
+make docker-run image=openmined/pysyft-dev:local
+```
+
+Inside the container you can run any make targets such as `test` or `notebook`.
+
 
 ## For Contributors
 If you are interested in contributing to Syft, first check out our [Contributor Quickstart Guide](https://github.com/OpenMined/Docs/blob/master/contributing/quickstart.md) and then sign into our [Slack Team](https://openmined.slack.com/) channel #team_pysyft to let us know which projects sound interesting to you! (or propose your own!).
